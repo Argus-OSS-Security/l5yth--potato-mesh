@@ -14,12 +14,13 @@
 
 name: Nix
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+# 
 jobs:
   flake-check:
     runs-on: ubuntu-latest

@@ -14,16 +14,17 @@
 
 name: Rust
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-    paths:
-      - '.github/**'
-      - 'matrix/**'
-      - 'tests/**'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+#     paths:
+#       - '.github/**'
+#       - 'matrix/**'
+#       - 'tests/**'
+# 
 permissions:
   contents: read
 

@@ -14,30 +14,31 @@
 
 name: Python
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-    paths:
-      - '.github/**'
-      - 'data/**'
-      - 'tests/**'
-      # Deployment surfaces read by tests/test_env_surfaces.py.
-      - '.env.example'
-      - 'README.md'
-      - 'docker-compose.yml'
-      - 'flake.nix'
-      # tests/test_configure_script.py runs it.
-      - 'configure.sh'
-      - 'web/lib/potato_mesh/config.rb'
-      # tests/test_dockerfile_sync.py compares these two files;
-      # tests/test_dockerfile_chromium.py runs their Chromium step.
-      - 'Dockerfile'
-      - 'web/Dockerfile'
-      # tests/test_dependency_manifests.py reads the web Gemfile and its lock.
-      - 'web/Gemfile*'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+#     paths:
+#       - '.github/**'
+#       - 'data/**'
+#       - 'tests/**'
+#       # Deployment surfaces read by tests/test_env_surfaces.py.
+#       - '.env.example'
+#       - 'README.md'
+#       - 'docker-compose.yml'
+#       - 'flake.nix'
+#       # tests/test_configure_script.py runs it.
+#       - 'configure.sh'
+#       - 'web/lib/potato_mesh/config.rb'
+#       # tests/test_dockerfile_sync.py compares these two files;
+#       # tests/test_dockerfile_chromium.py runs their Chromium step.
+#       - 'Dockerfile'
+#       - 'web/Dockerfile'
+#       # tests/test_dependency_manifests.py reads the web Gemfile and its lock.
+#       - 'web/Gemfile*'
+# 
 permissions:
   contents: read
 

@@ -14,18 +14,19 @@
 
 name: Build and Push Docker Images
 
-on:
-  push:
-    tags: [ 'v*' ]
-  workflow_dispatch:
-    # A dispatch publishes the version tags only; promote-latest moves the
-    # default tag after a stable tag push passes test-images (SPEC LT).
-    inputs:
-      version:
-        description: 'Version to publish (e.g., 1.0.0)'
-        required: true
-        default: '1.0.0'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     tags: [ 'v*' ]
+#   workflow_dispatch:
+#     # A dispatch publishes the version tags only; promote-latest moves the
+#     # default tag after a stable tag push passes test-images (SPEC LT).
+#     inputs:
+#       version:
+#         description: 'Version to publish (e.g., 1.0.0)'
+#         required: true
+#         default: '1.0.0'
+# 
 env:
   REGISTRY: ghcr.io
   IMAGE_PREFIX: l5yth/potato-mesh

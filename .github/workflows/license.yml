@@ -2,12 +2,13 @@
 # Licensed under the Apache License, Version 2.0 (see LICENSE)
 name: license
 
-on:
-  pull_request:
-    branches: [main]
-  push:
-    branches: [main]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     branches: [main]
+#   push:
+#     branches: [main]
+# 
 jobs:
   headers:
     runs-on: ubuntu-latest
